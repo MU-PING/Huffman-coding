@@ -1,4 +1,5 @@
-# Huffman_Coding
+# huffman_coding
+
 ## 程式簡介
 ### 簡述
 > 實作霍夫曼編碼
