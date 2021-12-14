@@ -2,26 +2,27 @@
 
 ## 程式簡介
 ### 簡述
-* Implement Huffman 「Coding」 & 「Encode」 & 「Decode」
+* Implement Huffman 「Coding」 & 「Encoding」 & 「Decoding」
 
 * Coding
   * Input: First line containing a single integer N. Each of the next N lines is a alphabet and it's frequency
   
-  * Output: Encode result, binary character code 
+  * Output: Coding result, Huffman coding table
   
-* Encode
-  * Input: First line containing a single integer N. Each of the next N lines is a alphabet and it's frequency
+* Encoding
+  * Input: a string
   
-  * Output: Encode result, binary character code 
+  * Output: Encoding result, binary Huffman code 
   
-* Decode
-  * Input: A binary character code 
+* Decoding
+  * Input: binary Huffman code  
   
-  * Output: Decode result, a string
-    > No fool-proof design
+  * Output: Decoding result, a string
+    
+> No fool-proof design
     
 ### 範例圖
-![image](https://user-images.githubusercontent.com/93152909/145950286-9af21b28-e437-470d-86e4-f9482d190c20.png)
+![image](https://user-images.githubusercontent.com/93152909/146004024-f1fe4f82-cc54-4867-a9c6-1e389bce7323.png)
 
 ### 補充說明
 1. Q: 輸出的次序是必須要照著輸入的次序嗎 ?   
@@ -44,21 +45,21 @@ A: 不用
 
 8. 從 Huffman tree 的根遍歷到葉節點，左0右1(相反也可)，將途中遇到的0、1序列串起來，即是各字符的編碼
 
-9. 將編碼結果儲存成coding table，Coding 完成
+9. 將編碼結果儲存成 Huffman coding table，Coding 完成
 
 > 霍夫曼樹的實作細節有很多種，3.的挑選節點可以使用優先佇列（Priority Queue）實現
 
-### Encode & Decode
+### Encoding & Decoding
 
-#### Encode
-* 根據 coding table 直接將字符轉換成二進制編碼
+#### Encoding
+* 根據 Huffman coding table 直接將字符轉換成二進制編碼
 
-#### Decode
-* 根據 coding table 或 Huffman tree 將二進制編碼回推字符
+#### Decoding
+* 根據 Huffman coding table 或 Huffman tree 將二進制編碼回推字符
 
 * 單字符解碼的時間複雜度
  
-  * coding table：使用 Hash 為O(1)；暴力搜尋最壞為O(n)
+  * Huffman coding table：使用 Hash 為O(1)；暴力搜尋最壞為O(n)
   
   * Huffman tree：最壞為 O(n)
   
