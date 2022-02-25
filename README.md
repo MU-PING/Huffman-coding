@@ -1,4 +1,4 @@
-# huffman-coding
+# Huffman-coding
 
 ## 程式簡介
 ### 簡述
